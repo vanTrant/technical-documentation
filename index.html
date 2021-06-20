@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/PT+Sans">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Ubuntu?preview.text=Welcome!&preview.text_type=custom">
+    <link rel="preconnect" href="https://fonts.google.com/specimen/Open+Sans?query=open#standard-styles">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS Center Align Documentation</title>
+</head>
+<body>
+    <main id="main-doc">
+        <div id="navbar-div">
+            <div class="menu">
+                <nav id="navbar">
+                    <header id="doc-title">
+                        <p>Center Align Documentation</p>
+                    </header>
+                    <div class="nav-child">
+                        <ul>
+                            <li><a class="nav-link" href="#Block_Display">Block Display</a></li>
+                            <li><a class="nav-link" href="#Flex_Display">Flex Display</a></li>
+                            <li><a class="nav-link" href="#Grid_Display">Grid Display</a></li>
+                            <li><a class="nav-link" href="#Absolute_Position">Absolute Position</a></li>
+                            <li><a class="nav-link" href="#Relative_Position">Relative Position</a></li>
+                            <li><a class="nav-link" href="#Fixed_Position">Fixed Position</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div id="main-doc-div">
+            <div id="welcome">
+                <h1>Welcome!</h1>
+                <p>This documentation purpose is to show readers information on how to center align a div element with CSS.</p>
+            </div>
+            <section id="Block_Display" class="main-section">
+                <header id="d-block">
+                    <h2>Block Display</h2>
+                </header>
+                <p>To center a div with a block display horizontally, what you need to do is use the following code:</p>
+                <ul>
+                    <li><code>margin-left: auto;</code> and</li>
+                    <li><code>margin-right: auto;</code></li>
+                </ul>
+                <p>To do it vertically use this code instead:</p>
+                <ul>
+                    <li><code>margin-top: auto;</code> and</li>
+                    <li><code>margin-bottom: auto;</code></li>
+                </ul>
+                <p>To center the div both horizontally and vertically, you just need to do one simple code which is <code>margin: auto;</code></p>
+                <p>To center a div inside a div container, you can do the same step as shown before.</p>
+            </section>
+            <section id="Flex_Display" class="main-section">
+                <header id="d-flex">
+                    <h2>Flex Display</h2>
+                </header>
+                <p>To center a single div horizontally or vertically within a flex container, you can do the following:</p>
+                <ul>
+                    <li>Horizontally: use <code>justify-content: center;</code></li>
+                    <li>Vertically: use <code>align-content: center;</code></li>
+                </ul>
+                <p>To align a single div both horizontally and vertically (in the middle of the div box) use both code as shown before.</p>
+                <p>For center aligning multiple div, you can see more information from this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">page</a>.</p>
+            </section>
+            <section id="Grid_Display" class="main-section">
+                <header id="d-grid">
+                    <h2>Grid Display</h2>
+                </header>
+                <p>To center a div inside a grid is a bit complicated, therefore I reccommend you to visit this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">page</a> instead.</p>
+            </section>
+            <section id="Absolute_Position" class="main-section">
+                <header id="p-abs">
+                    <h2>Absolute Position</h2>
+                </header>
+                <p>To center a div using absolute position you need to do the following:</p>
+                <div class="code-wrapper">
+                    <p><code>position: absolute;</code></p>
+                    <p><code>top: 50%;</code></p>
+                    <p><code>left: 50%;</code></p>
+                    <p><code>transform: translate(-50%, -50%)</code></p>
+                </div>
+                <p>If you somehow want to align it only horizontally or vertically, you just need to change the value to suit your needs</p>
+            </section>
+            <section id="Relative_Position" class="main-section">
+                <header id="p-rel">
+                    <h2>Relative Position</h2>
+                </header>
+                <p>To center a div with <code>position: relative;</code> you can use the isntruction in the <a href="#p-abs">Position - Absolute</a> section. You can change the <code>top</code> and <code>left</code> into <code>margin-top</code> and <code>margin-left</code> if it doesn't work.</p>
+            </section>
+            <section id="Fixed_Position" class="main-section main-section-last">
+                <header id="p-fix">
+                    <h2>Fixed Position</h2>
+                </header>
+                <p>To center a div inside a fixed parent, the easy way is to use flex display in the parent element. After that you just need to do the method as shown before in the <a href="#d-flex">Display - Flex</a> section.</p>
+            </section>
+        </div>
+    </main>
+    <div id="phone-view">
+        <p>
+            Sorry, this page us unavailable for phone :(
+        </p>
+    </div>
+</body>
+</html>

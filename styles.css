@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+    font-family: "PT Sans", sans-serif;
+}
+
+body {
+}
+
+#navbar-div {
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    box-shadow: 0px 0px 5px rgb(85, 85, 85);
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+#navbar header {
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.nav-child {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.nav-child ul li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #535353;
+    font-size: 1rem;
+    transition: 300ms ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.nav-link:hover::before {
+    content: url("https://fonts.gstatic.com/s/i/materialiconsoutlined/subdirectory_arrow_right/v10/24px.svg");
+
+}
+
+.nav-child ul li {
+    list-style: none;
+}
+
+#main-doc-div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    height: auto;
+    width: 70vw;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 50vh;
+    width: 50vw;
+    background: #3f3f3f;
+    color: white;
+    margin-left: 10vw;
+    margin-top: 13vh;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#welcome p {
+    padding: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-section {
+    line-height: 1.5;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+}
+
+.main-section header{
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-section p {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 0.5rem;
+    text-indent: 1rem;
+}
+
+#d-block {
+    margin-top: 50vh;
+}
+
+code {
+    background: rgb(231, 231, 231);
+}
+
+.code-wrapper {
+    line-height: 1;
+    font-size: 16px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: rgb(231, 231, 231);
+}
+
+.main-section-last {
+    padding-bottom: 20vh;
+}
+
+#phone-view {
+    display: none;
+}
+
+@media only screen and (max-width:1024px) {
+    .nav-child {
+        align-items: center;
+    }
+
+    #doc-title p {
+        font-size: 1rem;
+    }
+
+    .nav-child ul li a {
+        font-size: 0.8rem;
+    }
+
+    .nav-child ul li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-link:hover, .nav-link:focus {
+        font-size: 0.9rem;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-child {
+        align-items:flex-end;
+        margin-right: 1rem;
+    }
+
+    #doc-title p {
+        font-size: 0.9rem;
+    }
+
+    .nav-child ul li a {
+        font-size: 0.7rem;
+    }
+
+    .nav-child ul li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-link:hover, .nav-link:focus {
+        font-size: 0.8rem;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #main-doc {
+        display: none;
+    }
+    #phone-view {
+        display: initial;
+    }
+}
